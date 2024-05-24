@@ -6,7 +6,7 @@
 }
 
 .login-background {
-    background-image: url('/Login_page/hacker-1.jpg');
+    background-image: url('hacker-1.jpg');
     position: absolute;
     background-size: cover;
     height: 100vh;
@@ -16,7 +16,7 @@
 }
 
 .signup-background {
-    /* background-image: url('SIM^S.png'); */
+/*     background-image: url('SIM^S.png'); */
     background: linear-gradient(to top, red, green,blue);
     position: absolute;
     background-size: cover;
