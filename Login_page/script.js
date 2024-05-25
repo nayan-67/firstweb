@@ -59,3 +59,27 @@ function submit() {
         return false;
     };
 }
+let log_sidebar=document.querySelector('.login-sidebar');
+let log_menu=document.querySelector('.login-menu');
+let reg_sidebar=document.querySelector('.reg-sidebar');
+let reg_menu=document.querySelector('.reg-menu');
+let login_close=document.querySelector('.login-close');
+let reg_close=document.querySelector('.reg-close');
+
+log_menu.addEventListener("click",()=>{
+    log_sidebar.style.display='flex';
+    log_menu.style.display='none';
+});
+login_close.addEventListener("click",()=>{
+    log_sidebar.style.display='none';
+    log_menu.style.display='block';
+});
+reg_menu.addEventListener("click",()=>{
+    reg_sidebar.style.display='flex';
+    reg_menu.style.display='none';
+});
+reg_close.addEventListener("click",()=>{
+    reg_sidebar.style.display='none';
+    reg_menu.style.display='block';
+});
+
