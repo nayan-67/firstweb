@@ -4,11 +4,14 @@
     box-sizing: border-box;
     font-family: sans-serif;
 }
-
+body{
+    height: 100vh;
+}
 .login-background {
     background-image: url('hacker-1.jpg');
     position: absolute;
     background-size: cover;
+    background-position: center;
     height: 100vh;
     width: 100%;
     z-index: -1;
@@ -16,19 +19,20 @@
 }
 
 .signup-background {
-/*     background-image: url('SIM^S.png'); */
-    background: linear-gradient(to top, red, green,blue);
+    background-image: url('20397.png');
+    /* background: linear-gradient(to top, red, green,blue); */
     position: absolute;
     background-size: cover;
+    background-position: center;
     height: 100vh;
     width: 100%;
     z-index: -1;
-    filter: brightness(70%);
+    filter: brightness(60%);
 }
 
 .login-nav,
 .signup-nav {
-    height: 90px;
+    height: 80px;
     width: 100%;
     background: transparent;
     backdrop-filter: blur(10px);
@@ -38,12 +42,16 @@
     align-items: center;
     justify-content: space-between;
     padding: 0 7%;
+    box-shadow: 0px 5px 10px #93dff7;
 }
 
 .login-nav label,
 .signup-nav label {
+    color: #93e0f7d7;
     font-weight: 700;
     font-size: 22px;
+    letter-spacing: 2PX;
+    text-shadow: 0px 0px 15px #000000;
 }
 
 .about {
@@ -85,10 +93,83 @@
     left: 0;
 }
 
+.login-menu,.reg-menu {
+    display: none;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 600px) {
+    .about {
+        display: none;
+    }
+
+    .login-menu,.reg-menu {
+        display: block;
+    }
+
+    .login-container,
+    .signup-container {
+        min-width: 300px;
+    }
+}
+
+.login-sidebar,
+.reg-sidebar {
+    height: auto;
+    width: 200px;
+    position: fixed;
+    top: 0;
+    right: 0;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    display: flex;
+    flex-direction: column;
+    border-left: 1px solid #93dff7;
+    display: none;
+    font-size: 13px;
+}
+
+.login-close,
+.reg-close {
+    height: auto;
+    width: 100%;
+    color: #93dff7;
+    font-size: 30px;
+    position: relative;
+    left: 85%;
+    cursor: pointer;
+    margin-top: 3%;
+}
+
+.login-sidebar a{
+    text-decoration: none;
+    color: #93dff7;
+    padding: 10%;
+    border-bottom: 1px solid #93dff7;
+}
+
+.reg-sidebar a {
+    text-decoration: none;
+    color: #4f7ae0;
+    padding: 10%;
+    border-bottom: 1px solid #4f7ae0;
+}
+
+.login-sidebar a:hover {
+    background: #93dff7;
+    color: black;
+}
+
+.reg-sidebar a:hover {
+    background: #0b41be;
+    color: white;
+}
+
 .login-container,
 .signup-container {
     height: auto;
-    width: 320px;
+    min-width: 320px;
     padding: 15px;
     position: absolute;
     top: 50%;
@@ -97,19 +178,20 @@
     border: 1.7px solid rgb(33, 187, 214);
     border-radius: 15px;
     backdrop-filter: blur(5px);
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.575);
+    box-shadow: 0px 0px 10px #93dff7;
     color: whitesmoke;
 }
 
 .signup-background,
 .signup-nav,
-.signup-container {
+.signup-container,
+.reg-side-bar {
     display: none;
 }
 
-.login-background,.login-nav,.login-container{
-    /* display: none; */
-}
+/* .login-background,.login-nav,.login-container,.login-side-bar{
+    display: none;
+} */
 h2 {
     text-align: center;
     font-size: 35px;
@@ -131,7 +213,7 @@ h2 {
 }
 
 .signup-container .material-symbols-outlined {
-    color: #f793c5;
+    color: #5a82e0;
 }
 
 #logv-off {
@@ -157,7 +239,7 @@ h2 {
 }
 
 .signup-container hr {
-    border: 1px solid rgb(238, 26, 114);
+    border: 1px solid #5a82e0;
 }
 
 .input_content {
@@ -177,7 +259,7 @@ h2 {
 }
 
 .signup-container input::placeholder {
-    color: rgb(248, 148, 218);
+    color: #5a82e0;
     font-size: 15px;
 }
 
@@ -190,7 +272,7 @@ h2 {
 #agree {
     margin: 0px 6px 0px 0px;
     border-radius: 8px;
-    accent-color: #f793c5;
+    accent-color: #5a82e0;
 }
 
 .forgot {
@@ -208,7 +290,7 @@ h2 {
     width: auto;
     display: flex;
     align-items: center;
-    color: rgb(255, 255, 255);
+    color: #bcc3e8;
 }
 
 .forgot-password {
@@ -237,6 +319,7 @@ h2 {
 
 .log-submit:hover {
     background-color: #93e0f7a6;
+    color: white;
 }
 
 .reg-submit:hover {
@@ -254,15 +337,12 @@ h2 {
     cursor: pointer;
 }
 
-/* #signup a{
-    color: rgb(224, 240, 250);
-    text-decoration: none;
-} */
+
 #signup strong:hover {
     color: rgb(174, 233, 243);
     text-decoration: underline;
 }
 
 #login strong:hover {
-    color: #f793c5;
+    color: #8aa0cf;
 }
