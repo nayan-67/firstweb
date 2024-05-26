@@ -49,7 +49,7 @@ function log_submit(){
     let log_user=document.querySelector('.log_uname');
     let log_pass=document.querySelector('#log_pass');
     if(log_user.value==''|| log_user.value==' '){
-        alert("Username should be without space");
+        alert("Please Enter username Without Space");
         log_user.focus();
         return false;
     }else if(log_pass.value==''){
