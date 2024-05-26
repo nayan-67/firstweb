@@ -12,7 +12,7 @@
 
 <body>
     <div class="login-background"></div>
-    <div class="login-nav">
+    <div class="login_nav">
         <label>HACKER</label>
         <div class="about">
             <a href="#">WORK</a>
@@ -20,11 +20,13 @@
             <a href="#">BLOG</a>
             <a href="#">CONTACT</a>
         </div>
-        <div class="login-menu"><i class="fa-solid fa-bars"></i></div>
+        <div class="menu">
+            <i class="fa-solid fa-bars login-menu"></i>
+            <span class="login-close">&times;</span>
+        </div>
 
     </div>
     <div class="login-sidebar">
-        <span class="login-close">&times;</span>
         <a href="#">WORK</a>
         <a href="#">ABOUT</a>
         <a href="#">BLOG</a>
@@ -54,8 +56,11 @@
             </div>
             <hr>
             <section class="forgot">
-                <div class="remember"><input type="checkbox" id="rememberme"><label for="rememberme">Remember me</label>
-                </div><a href="#" class="forgot-password">Forgot password?</a>
+                <div class="remember">
+                    <input type="checkbox" id="rememberme">
+                    <label for="rememberme">Remember me</label>
+                </div>
+                <a href="#" class="forgot-password">Forgot password?</a>
             </section>
             <div class="submit">
                 <input type="submit" value="Login" class="log-submit">
@@ -65,27 +70,30 @@
     </div>
     <!-- Signup -->
     <div class="signup-background"></div>
-    <div class="signup-nav" style="color: #496cbf;border-color: #88a6ed;box-shadow: 0px 5px 10px #6e8acc9a;">
-        <label style="color: rgb(7, 10, 14);text-shadow: 0px 0px 5px #044ef8;
-        ">BUGATTI</label>
+    <div class="signup_nav" style="color: #688bdb;border-color: #88a6ed;box-shadow: 0px 5px 10px #84a5f19a;">
+        <label>BUGATTI</label>
         <div class="about">
             <a href="#">WORK</a>
             <a href="#">ABOUT</a>
             <a href="#">BLOG</a>
             <a href="#">CONTACT</a>
         </div>
-        <div class="reg-menu"><i class="fa-solid fa-bars"></i></div>
+        <div class="menu">
+            <i class="fa-solid fa-bars reg-menu"></i>
+            <span class="reg-close" style="color: #688bdb;">&times;</span>
+        </div>
     </div>
-    <div class="reg-sidebar" style="border-left: 1px solid #4f7ae0;">
-        <span class="reg-close" style="color: #4f7ae0;">&times;</span>
+    <div class="reg-sidebar" style="border-left: 1px solid #688bdb;
+    ">
         <a href="#">WORK</a>
         <a href="#">ABOUT</a>
         <a href="#">BLOG</a>
         <a href="#">CONTACT</a>
     </div>
 
-    <div class="signup-container" style="border: 1.7px solid #0b41be;box-shadow: 0px 0px 10px #6e8acc9a;">
-        <h2 style="color: #3c6bd8;">Sign up</h2>
+    <div class="signup-container" style="border: 1.7px solid #0b41be;box-shadow: 0px 0px 12px #6e8acc9a;">
+        <h2 style="color: #4c7df1;text-shadow: 0px 1px 5px #0051ff;
+        ">Sign up</h2>
         <form action="#" method="get">
             <div class="input">
                 <span class="material-symbols-outlined">
@@ -129,12 +137,12 @@
             </div>
             <hr>
             <section class="forgot">
-                <div class="remember"><input type="checkbox" id="agree">
+                <div class="remember" style="color: #bcc3e8;"><input type="checkbox" id="agree">
                     <label for="agree">I accept the term of user & privacy policy</label>
                 </div>
             </section>
             <div class="submit">
-                <input type="submit" value="Sign up" style="background-color: #0b41be; color: white;" class="reg-submit" onclick="return submit()">
+                <input type="submit" value="Sign up" style="background-color: #0b41be; color: white;" class="reg-submit" onclick="return reg_submit()">
             </div>
             <span id="login" style="color: #bcc3e8;">Already have an account?&nbsp;<strong onclick="login()">Login</strong></span>
         </form>
