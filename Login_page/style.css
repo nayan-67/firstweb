@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Acme&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
-body{
+
+body {
     height: 100vh;
 }
+
 .login-background {
     background-image: url('hacker-1.jpg');
     position: absolute;
@@ -19,7 +23,7 @@ body{
 }
 
 .signup-background {
-    background-image: url('BUGATTI.jpg');
+    background-image: url('20397.png');
     /* background: linear-gradient(to top, red, green,blue); */
     position: absolute;
     background-size: cover;
@@ -27,12 +31,12 @@ body{
     height: 100vh;
     width: 100%;
     z-index: -1;
-    filter: brightness(40%) blur(.5px);
+    filter: blur(.5px);
 }
 
-.login-nav,
-.signup-nav {
-    height: 80px;
+.login_nav,
+.signup_nav {
+    height: 70px;
     width: 100%;
     background: transparent;
     backdrop-filter: blur(10px);
@@ -45,13 +49,19 @@ body{
     box-shadow: 0px 5px 10px #93dff7;
 }
 
-.login-nav label,
-.signup-nav label {
+.login_nav label,
+.signup_nav label {
     color: #93e0f7d7;
     font-weight: 700;
-    font-size: 22px;
-    letter-spacing: 2PX;
-    text-shadow: 0px 0px 15px #000000;
+    font-size: clamp(1.2em,3vw,1.5em);
+    letter-spacing: 4PX;
+    text-shadow: 0px 0px 8px #000000;
+    font-family: "Acme", sans-serif;
+}
+
+.signup_nav label {
+    text-shadow: 0 -0.01em 0.1em #FFF, 0.01em -0.02em 0.15em #004cff, 0.01em -0.05em 0.15em #003dca, 0.02em -0.15em 0.2em #0034ad, 0.04em -0.20em 0.3em #002e9b, 0.05em -0.25em 0.4em #002479, 0.06em -0.2em 0.9em #001e63, 0.1em -0.1em 1.0em #00123d;
+    color: rgb(213, 213, 255);
 }
 
 .about {
@@ -93,17 +103,21 @@ body{
     left: 0;
 }
 
-.login-menu,.reg-menu {
-    display: none;
+.login-menu,
+.reg-menu {
+    /* display: none; */
     cursor: pointer;
+    font-size: 20px;
 }
-
+.menu{
+    display: none;
+}
 @media screen and (max-width: 600px) {
     .about {
         display: none;
     }
 
-    .login-menu,.reg-menu {
+    .menu {
         display: block;
     }
 
@@ -111,38 +125,36 @@ body{
     .signup-container {
         min-width: 300px;
     }
+    /* .forgot{
+        font-size: 12px;
+    } */
 }
 
 .login-sidebar,
 .reg-sidebar {
     height: auto;
-    width: 200px;
+    width: 165px;
     position: fixed;
-    top: 0;
-    right: 0;
+    top: auto;
+    right: -200px;
     background: transparent;
     backdrop-filter: blur(10px);
     z-index: 100;
     display: flex;
     flex-direction: column;
     border-left: 1px solid #93dff7;
-    display: none;
     font-size: 13px;
+    transition: all .5s ease-in-out;
 }
 
 .login-close,
 .reg-close {
-    height: auto;
-    width: 100%;
-    color: #93dff7;
     font-size: 30px;
-    position: relative;
-    left: 85%;
+    display: none;
     cursor: pointer;
-    margin-top: 3%;
 }
 
-.login-sidebar a{
+.login-sidebar a {
     text-decoration: none;
     color: #93dff7;
     padding: 10%;
@@ -151,9 +163,9 @@ body{
 
 .reg-sidebar a {
     text-decoration: none;
-    color: #4f7ae0;
+    color: #688bdb;
     padding: 10%;
-    border-bottom: 1px solid #4f7ae0;
+    border-bottom: 1px solid #688bdb;
 }
 
 .login-sidebar a:hover {
@@ -183,19 +195,20 @@ body{
 }
 
 .signup-background,
-.signup-nav,
+.signup_nav,
 .signup-container,
 .reg-side-bar {
     display: none;
 }
 
-/* .login-background,.login-nav,.login-container,.login-side-bar{
+/* .login-background,.login_nav,.login-container,.login-side-bar{
     display: none;
 } */
 h2 {
     text-align: center;
-    font-size: 35px;
+    font-size: clamp(1.8em,3.5vw,2em);
     margin: 10px 10px 20px 10px;
+    text-shadow: 0px 1px 5px #00c3ff;
 }
 
 .input {
@@ -213,7 +226,7 @@ h2 {
 }
 
 .signup-container .material-symbols-outlined {
-    color: #5a82e0;
+    color: #99b5f5;
 }
 
 #logv-off {
@@ -239,7 +252,7 @@ h2 {
 }
 
 .signup-container hr {
-    border: 1px solid #5a82e0;
+    border: 1px solid #99b5f5;
 }
 
 .input_content {
@@ -248,7 +261,7 @@ h2 {
     background: transparent;
     border: none;
     color: aliceblue;
-    font-size: 16px;
+    font-size: 15px;
     border-color: transparent;
     outline: none;
 }
@@ -259,7 +272,7 @@ h2 {
 }
 
 .signup-container input::placeholder {
-    color: #5a82e0;
+    color: #99b5f5;
     font-size: 15px;
 }
 
@@ -283,14 +296,13 @@ h2 {
     align-items: center;
     justify-content: space-between;
     margin: 10px 0px;
-    font-size: 14px;
+    font-size: clamp(0.7rem, 2.9vw, 0.8rem);
 }
 
 .remember {
     width: auto;
     display: flex;
     align-items: center;
-    color: #bcc3e8;
 }
 
 .forgot-password {
@@ -318,12 +330,14 @@ h2 {
 }
 
 .log-submit:hover {
-    background-color: #93e0f7a6;
+    box-shadow: 0px 0px 10px #93dff7;
+    text-shadow: 0px 0px 5px #000000;
     color: white;
 }
 
-.reg-submit:hover {
-    background-color: #ad507ebb;
+.reg-submit:hover{
+    box-shadow: 0px 0px 12px #0051ffec;
+    text-shadow: 0px 0px 5px #000000;
 }
 
 #signup,
