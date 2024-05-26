@@ -45,6 +45,23 @@ function login() {
     reg_container.style.display = 'none';
 }
 
+function log_submit(){
+    let log_user=document.querySelector('.log_uname');
+    let log_pass=document.querySelector('#log_pass');
+    if(log_user.value==''|| log_user.value==' '){
+        alert("Username should be without space");
+        log_user.focus();
+        return false;
+    }else if(log_pass.value==''){
+        alert("Please Enter Password");
+        log_pass.focus();
+        return false;
+    }else{
+        alert("Welcome User");
+        return true;
+    }
+};
+
 function reg_submit() {
     let reg_email=document.querySelector("#reg-email");
     let reg_pass=document.querySelector("#reg-pass");
