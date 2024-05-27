@@ -2,24 +2,24 @@ let log_invisible = document.querySelector("#logv-off");
 let log_visible = document.querySelector("#logv-on");
 let reg_invisible = document.querySelector("#regv-off");
 let reg_visible = document.querySelector("#regv-on");
-let log_input = document.querySelector("#log_pass");
-let reg_input = document.querySelector("#reg-pass");
+let log_pass = document.querySelector("#log_pass");
+let reg_pass = document.querySelector("#reg-pass");
 
 function visibility_off() {
     log_invisible.style.display = 'none';
     log_visible.style.display = 'block';
     reg_invisible.style.display = 'none';
     reg_visible.style.display = 'block';
-    log_input.type = "text";
-    reg_input.type = "text";
+    log_pass.type = "text";
+    reg_pass.type = "text";
 }
 function visibility() {
     log_invisible.style.display = 'block';
     log_visible.style.display = 'none';
     reg_invisible.style.display = 'block';
     reg_visible.style.display = 'none';
-    log_input.type = "password";
-    reg_input.type = "password";
+    log_pass.type = "password";
+    reg_pass.type = "password";
 }
 let log_bg=document.querySelector(".login-background");
 let log_nav=document.querySelector(".login_nav");
@@ -53,7 +53,6 @@ function login() {
 
 function log_submit(){
     let log_user=document.querySelector('.log_uname');
-    let log_pass=document.querySelector('#log_pass');
     let log_error1=document.querySelector('.error1');
     let log_error2=document.querySelector('.error2');
     let log_hr1=document.querySelector('.hr1');
@@ -81,8 +80,7 @@ function log_submit(){
 function reg_submit() {
     let f_name=document.querySelector('#f_name');
     let l_name=document.querySelector('#l_name');
-    let reg_email=document.querySelector("#reg-email");
-    let reg_pass=document.querySelector("#reg-pass");
+    let r_email=document.querySelector("#reg-email");
     let confirm_pass=document.querySelector("#confirm-pass");
     const regex = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
     let reg_error1=document.querySelector('#error1');
