@@ -15,10 +15,10 @@
     <div class="login_nav">
         <label>HACKER</label>
         <div class="about">
-            <a href="#">WORK</a>
+            <a href="#">HOME</a>
             <a href="#">ABOUT</a>
-            <a href="#">BLOG</a>
             <a href="#">CONTACT</a>
+            <a href="#" onclick="signup()">REGISTER</a>
         </div>
         <div class="menu">
             <i class="fa-solid fa-bars login-menu"></i>
@@ -29,24 +29,25 @@
     <div class="login-sidebar">
         <a href="#">WORK</a>
         <a href="#">ABOUT</a>
-        <a href="#">BLOG</a>
         <a href="#">CONTACT</a>
+        <a href="#" onclick="signup()">REGISTER</a>
     </div>
     <div class="login-container">
         <h2 style="color: #93dff7;">Login</h2>
-        <form action="#" method="post">
+        <form action="javascript:void(0);" method="get" id="log-form">
             <div class="input">
                 <span class="material-symbols-outlined">
                     person
                 </span>
-                <input type="text" class="input_content" placeholder="Username" required>
+                <input type="text" class="input_content log_uname" placeholder="Username">
             </div>
-            <hr>
+            <hr class="hr1">
+            <div class="error1"></div>
             <div class="input">
                 <span class="material-symbols-outlined">
                     key
                 </span>
-                <input type="password" class="input_content" placeholder="Password" required id="log-pass">
+                <input type="password" class="input_content" placeholder="Password" id="log_pass">
                 <span class="material-symbols-outlined" id="logv-off" onclick="visibility_off()">
                     visibility_off
                 </span>
@@ -54,7 +55,8 @@
                     visibility
                 </span>
             </div>
-            <hr>
+            <hr class="hr2">
+            <div class="error2"></div>
             <section class="forgot">
                 <div class="remember">
                     <input type="checkbox" id="rememberme">
@@ -63,7 +65,7 @@
                 <a href="#" class="forgot-password">Forgot password?</a>
             </section>
             <div class="submit">
-                <input type="submit" value="Login" class="log-submit" onclick="log_submit()">
+                <input type="submit" value="Login" class="log-submit" onclick="return log_submit()">
             </div>
             <span id="signup">Don't have an account?&nbsp;<strong onclick="signup()">Signup now</strong></span>
         </form>
@@ -73,54 +75,56 @@
     <div class="signup_nav" style="color: #688bdb;border-color: #88a6ed;box-shadow: 0px 5px 10px #84a5f19a;">
         <label>BUGATTI</label>
         <div class="about">
-            <a href="#">WORK</a>
+            <a href="#">HOME</a>
             <a href="#">ABOUT</a>
-            <a href="#">BLOG</a>
             <a href="#">CONTACT</a>
+            <a href="#" onclick="login()">LOGIN</a>
         </div>
         <div class="menu">
             <i class="fa-solid fa-bars reg-menu"></i>
             <span class="reg-close" style="color: #688bdb;">&times;</span>
         </div>
     </div>
-    <div class="reg-sidebar" style="border-left: 1px solid #688bdb;
-    ">
-        <a href="#">WORK</a>
+    <div class="reg-sidebar" style="border-left: 1px solid #688bdb;">
+        <a href="#">HOME</a>
         <a href="#">ABOUT</a>
-        <a href="#">BLOG</a>
         <a href="#">CONTACT</a>
+        <a href="#" onclick="login()">LOGIN</a>
     </div>
 
-    <div class="signup-container" style="border: 1.7px solid #0b41be;box-shadow: 0px 0px 12px #6e8acc9a;">
+    <div class="signup-container" style="border: 1px solid #0b41be;box-shadow: 0px 0px 12px #6e8acc9a;">
         <h2 style="color: #4c7df1;text-shadow: 0px 1px 5px #0051ff;
         ">Sign up</h2>
-        <form action="#" method="get">
+        <form action="#" method="get" id="reg-form">
             <div class="input">
                 <span class="material-symbols-outlined">
                     person
                 </span>
-                <input type="text" class="input_content" placeholder="First Name" required>
+                <input type="text" class="input_content" id="f_name" placeholder="First Name">
             </div>
             <hr>
+            <div id="error1"></div>
             <div class="input">
                 <span class="material-symbols-outlined">
                     person
                 </span>
-                <input type="text" class="input_content" placeholder="Last Name" required>
+                <input type="text" class="input_content" id="l_name" placeholder="Last Name">
             </div>
             <hr>
+            <div id="error2"></div>
             <div class="input">
                 <span class="material-symbols-outlined">
                     mail
                 </span>
-                <input type="email" id="reg-email" class="input_content" placeholder="Email" required>
+                <input type="email" id="reg-email" class="input_content" placeholder="Email">
             </div>
             <hr>
+            <div id="error3"></div>
             <div class="input">
                 <span class="material-symbols-outlined">
                     key
                 </span>
-                <input type="password" id="reg-pass" class="input_content" placeholder="Password" required>
+                <input type="password" id="reg-pass" class="input_content" placeholder="Password" min="6" max="12" required>
                 <span class="material-symbols-outlined" id="regv-off" onclick="visibility_off()">
                     visibility_off
                 </span>
@@ -129,13 +133,15 @@
                 </span>
             </div>
             <hr>
+            <div id="error4"></div>
             <div class="input">
                 <span class="material-symbols-outlined">
                     key
                 </span>
-                <input type="password" id="confirm-pass" class="input_content" placeholder="Confirm Password" required>
+                <input type="password" id="confirm-pass" class="input_content" placeholder="Confirm Password">
             </div>
             <hr>
+            <div id="error5"></div>
             <section class="forgot">
                 <div class="remember" style="color: #bcc3e8;"><input type="checkbox" id="agree">
                     <label for="agree">I accept the term of user & privacy policy</label>
