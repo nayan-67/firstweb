@@ -2,7 +2,7 @@ let log_invisible = document.querySelector("#logv-off");
 let log_visible = document.querySelector("#logv-on");
 let reg_invisible = document.querySelector("#regv-off");
 let reg_visible = document.querySelector("#regv-on");
-let log_input = document.querySelector("#log-pass");
+let log_input = document.querySelector("#log_pass");
 let reg_input = document.querySelector("#reg-pass");
 
 function visibility_off() {
