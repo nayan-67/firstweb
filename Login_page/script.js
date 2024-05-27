@@ -35,6 +35,7 @@ function signup() {
     reg_bg.style.display = 'block';
     reg_nav.style.display = 'flex';
     reg_container.style.display = 'block';
+    login_close.click();
 }
 function login() {
     log_bg.style.display = 'block';
@@ -43,44 +44,90 @@ function login() {
     reg_bg.style.display = 'none';
     reg_nav.style.display = 'none';
     reg_container.style.display = 'none';
+    reg_close.click();
 }
+// let form=document.querySelector('form');
+// form.addEventListener("submit", (e)=>{
+//     e.preventDefault();
+// })
 
 function log_submit(){
     let log_user=document.querySelector('.log_uname');
     let log_pass=document.querySelector('#log_pass');
-    if(log_user.value==''|| log_user.value==' '){
-        alert("Please Enter username Without Space");
+    let log_error1=document.querySelector('.error1');
+    let log_error2=document.querySelector('.error2');
+    let log_hr1=document.querySelector('.hr1');
+    let log_hr2=document.querySelector('.hr2');
+    if(log_user.value==''){
+        log_hr1.style.border= "1px solid red";
+        log_error1.innerHTML="Please Enter username";
         log_user.focus();
         return false;
     }else if(log_pass.value==''){
-        alert("Please Enter Password");
+        log_hr2.style.border= "1px solid red";
+        log_hr1.style.border= "1px solid #21bbd6";
+        log_error1.innerHTML="";
+        log_error2.innerHTML="Please Enter Password";
         log_pass.focus();
         return false;
     }else{
         alert("Welcome User");
+        log_hr2.style.border= "1px solid #99b5f5";
+        log_error2.innerHTML="";
         return true;
     }
 };
 
 function reg_submit() {
+    let f_name=document.querySelector('#f_name');
+    let l_name=document.querySelector('#l_name');
     let reg_email=document.querySelector("#reg-email");
     let reg_pass=document.querySelector("#reg-pass");
     let confirm_pass=document.querySelector("#confirm-pass");
-    const regex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
-    if (reg_email.value==='') {
-        alert("Please Enter Email")
+    const regex = /^[a-z0-9._-]+@[a-z0-9.-]+\.[a-z]{2,4}$/;
+    let reg_error1=document.querySelector('#error1');
+    let reg_error2=document.querySelector('#error2');
+    let reg_error3=document.querySelector('#error3');
+    let reg_error4=document.querySelector('#error4');
+    let reg_error5=document.querySelector('#error5');
+    if (f_name.value.trim()=='') {
+        reg_error1.innerHTML="Please Enter First Name";
+        f_name.focus();
+        return false;
+    }else if(l_name.value.trim()==''){
+        reg_error1.innerHTML="";
+        reg_error2.innerHTML="Please Enter Last Name";
+        l_name.focus();
+        return false;
+    }else if (reg_email.value==='') {
+        reg_error2.innerHTML="";
+        reg_error3.innerHTML="Please Enter Email";
         reg_email.focus();
         return false;
-    }else if(reg_email.value!==regex){
-        alert("Please Enter a Valid Email");
+    }else if(!reg_email.value.match(regex)){
+        reg_error3.innerHTML="Please Enter a Valid Email";
         reg_email.focus();
+        return false;
+    }else if(reg_pass.value.trim()==''){
+        reg_error3.innerHTML="";
+        reg_error4.innerHTML="Please Enter Password";
+        reg_pass.focus();
+        return false;
+    }else if(reg_pass.value.length < 6){
+        reg_error4.innerHTML="Password Should be at least 6 character";
+        reg_pass.focus();
+        return false;
+    }else if(confirm_pass.value==''){
+        reg_error4.innerHTML="";
+        reg_error5.innerHTML="Please Confirm Password";
+        confirm_pass.focus();
         return false;
     }else if (reg_pass.value!==confirm_pass.value) {
-        // confirm_pass.title="password should be same";
-        alert("Not same Password");
+        reg_error5.innerHTML="Not same Password";
         confirm_pass.focus();
         return false;
     }else{
+        reg_error5.innerHTML="";
         alert("Registaton Successfull");
         return true;
     };
