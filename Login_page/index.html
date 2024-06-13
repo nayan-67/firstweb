@@ -27,7 +27,7 @@
 
     </div>
     <div class="login-sidebar">
-        <a href="#">HOME</a>
+        <a href="#">WORK</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT</a>
         <a href="#" onclick="signup()">REGISTER</a>
@@ -72,7 +72,7 @@
     </div>
     <!-- Signup -->
     <div class="signup-background"></div>
-    <div class="signup_nav" style="color: #688bdb;border-color: #88a6ed;box-shadow: 0px 5px 10px #84a5f19a;">
+    <div class="signup_nav" style="color: #5cb9f9;border-color: #88a6ed;box-shadow: 0px 5px 10px #84a5f19a;">
         <label>BUGATTI</label>
         <div class="about">
             <a href="#">HOME</a>
@@ -82,18 +82,18 @@
         </div>
         <div class="menu">
             <i class="fa-solid fa-bars reg-menu"></i>
-            <span class="reg-close" style="color: #688bdb;">&times;</span>
+            <span class="reg-close" style="color: #5cb9f9;">&times;</span>
         </div>
     </div>
-    <div class="reg-sidebar" style="border-left: 1px solid #688bdb;">
+    <div class="reg-sidebar" style="border-left: 1px solid #5cb9f9;">
         <a href="#">HOME</a>
         <a href="#">ABOUT</a>
         <a href="#">CONTACT</a>
         <a href="#" onclick="login()">LOGIN</a>
     </div>
 
-    <div class="signup-container" style="border: 1px solid #0b41be;box-shadow: 0px 0px 12px #6e8acc9a;">
-        <h2 style="color: #4c7df1;text-shadow: 0px 1px 5px #0051ff;
+    <div class="signup-container" style="border: 1px solid #5cb9f9;box-shadow: 0px 0px 15px #829ddbcb;">
+        <h2 style="color: #5cb9f9;text-shadow: 0px 1px 5px #1893e6dc;
         ">Sign up</h2>
         <form action="#" method="get" id="reg-form">
             <div class="input">
@@ -124,7 +124,7 @@
                 <span class="material-symbols-outlined">
                     key
                 </span>
-                <input type="password" id="reg-pass" class="input_content" placeholder="Password">
+                <input type="password" id="reg-pass" class="input_content" placeholder="Password" min="6" max="12" required>
                 <span class="material-symbols-outlined" id="regv-off" onclick="visibility_off()">
                     visibility_off
                 </span>
@@ -148,7 +148,7 @@
                 </div>
             </section>
             <div class="submit">
-                <input type="submit" value="Sign up" style="background-color: #0b41be; color: white;" class="reg-submit" onclick="return reg_submit()">
+                <input type="submit" value="Sign up" style="background-color: #217bc8; color: white;" class="reg-submit" onclick="return reg_submit()">
             </div>
             <span id="login" style="color: #bcc3e8;">Already have an account?&nbsp;<strong onclick="login()">Login</strong></span>
         </form>
