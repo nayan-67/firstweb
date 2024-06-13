@@ -23,7 +23,7 @@ body {
 }
 
 .signup-background {
-    background-image: url('20397.png');
+    background-image: url('Bugatti-Chiron.png');
     /* background: linear-gradient(to top, red, green,blue); */
     position: absolute;
     background-size: cover;
@@ -31,7 +31,7 @@ body {
     height: 100vh;
     width: 100%;
     z-index: -1;
-    filter: blur(.5px);
+    filter: brightness(70%);
 }
 
 .login_nav,
@@ -162,9 +162,9 @@ body {
 
 .reg-sidebar a {
     text-decoration: none;
-    color: #688bdb;
+    color: #5cb9f9;
     padding: 10%;
-    border-bottom: 1px solid #688bdb;
+    border-bottom: 1px solid #5cb9f9;
 }
 
 .login-sidebar a:hover {
@@ -173,7 +173,7 @@ body {
 }
 
 .reg-sidebar a:hover {
-    background: #0b41be;
+    background: #217bc8;
     color: white;
 }
 
@@ -243,7 +243,7 @@ h2 {
 }
 
 .signup-container .material-symbols-outlined {
-    color: #99b5f5;
+    color: #5cb9f9;
 }
 
 #logv-off {
@@ -289,7 +289,7 @@ h2 {
 }
 
 .signup-container input::placeholder {
-    color: #99b5f5;
+    color: #5cb9f9;
     font-size: 15px;
 }
 
